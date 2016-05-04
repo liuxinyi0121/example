@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>select2</title>
+<meta charset="gb2312" />
+<link href="css/select2.min.css" rel="stylesheet" />
+<link href="css/uniform.css" rel="stylesheet" />
+<script src="js/jquery.min.js"></script> 
+<script src="js/select2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".selectContent").select2();
+  $(".selectContent1").select2();
+  $(".selectContent2").select2();
+});
+$(".selectContent1").select2({
+  placeholder: "Select a state",
+  allowClear: true
+}); 
+$(".selectContent2").select2({
+  placeholder: "Select a state"
+});
+
+var data = [{ id: 0, text: 'enhancement' }, { id: 1, text: 'bug' }, { id: 2, text: 'duplicate' }, { id: 3, text: 'invalid' }, { id: 4, text: 'wontfix' }];
+
+$(".js-example-data-array").select2({
+  data: data
+})
+
+$(".js-example-data-array-selected").select2({
+  data: data
+})
+</script>
+</head>
+<body>
+ <div id="content">
+   <div class="container">
+   <h2>1.简单的select2</h2>
+    <p>
+      <select class="selectContent">	    
+        <option value="HH">呼和浩特</option>
+        <option value="BT">包头</option>
+		<option value="BT">长春</option>
+		<option value="BT">北京</option>
+		<option value="BT">山东</option>
+		<option value="BT">西安</option>
+		<option value="BT">哈尔滨</option>
+		<option value="BT">湖北</option>
+      </select>
+    </p>
+   </div>
+   <div class="container">
+      <h2>2.多选的select2</h2>
+    <p>
+      <select class="selectContent" multiple="multiple">
+        <option value="HH">呼和浩特</option>
+        <option value="BT">包头</option>
+		<option value="BT">长春</option>
+		<option value="BT">北京</option>
+		<option value="BT">山东</option>
+		<option value="BT">西安</option>
+		<option value="BT">哈尔滨</option>
+		<option value="BT">湖北</option>
+      </select>
+    </p>
+   </div>
+   <div class="container">
+      <h2>3.Placeholders //出不来</h2>
+    <p>
+      <select class="selectContent1" >
+	    <option></option>
+        <option value="HH">呼和浩特</option>
+        <option value="BT">包头</option>
+		<option value="BT">长春</option>
+		<option value="BT">北京</option>
+		<option value="BT">山东</option>
+		<option value="BT">西安</option>
+		<option value="BT">哈尔滨</option>
+		<option value="BT">湖北</option>
+      </select>
+    </p>
+	 <p>
+      <select class="selectContent2"  multiple="multiple">
+	    <option></option>
+        <option value="HH">呼和浩特</option>
+        <option value="BT">包头</option>
+		<option value="BT">长春</option>
+		<option value="BT">北京</option>
+		<option value="BT">山东</option>
+		<option value="BT">西安</option>
+		<option value="BT">哈尔滨</option>
+		<option value="BT">湖北</option>
+      </select>
+    </p>
+   </div>
+    <div class="container">
+      <h2>4.从数组获取数据</h2>
+    <p>
+      <select class="js-example-data-array"></select>
+      <select class="js-example-data-array-selected">
+          <option value="2" selected="selected">duplicate</option>
+      </select>
+    </p>
+   </div>
+      <div align="center">学习：https://select2.github.io/examples.html</div>
+   </div>
+ </div>
+</body>
+</html>

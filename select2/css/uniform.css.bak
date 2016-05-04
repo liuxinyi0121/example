@@ -1,0 +1,14 @@
+#content{
+  width:70%;
+  margin:auto;
+  background:#CCCCFF;
+}
+.container{
+  padding-top:5px;
+  padding-bottom:5px;
+  margin:auto;
+  width:200px;
+}
+.selectContent, .selectContent2,.selectContent1{
+  width:200px;
+}
